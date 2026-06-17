@@ -62,6 +62,408 @@
     <div class="glow-orb w-[300px] h-[300px] sm:w-[700px] sm:h-[700px] bg-cyan-950/25 top-[500px] right-[-200px]"></div>
     <div class="glow-orb w-[250px] h-[250px] sm:w-[550px] sm:h-[550px] bg-aeroblue/15 bottom-[300px] left-[-80px]"></div>
 
+    <nav class="glass-nav fixed top-0 left-0 w-full z-[999] px-4 sm:px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between relative z-[1001]">
+            <a href="#" class="text-lg sm:text-xl font-bold tracking-tight text-white hover:opacity-90 transition-opacity">
+                &lt;Nabeel.F /&gt;
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-cybercyan transition-colors">About</a>
+                <a href="#skills" class="hover:text-cybercyan transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-cybercyan transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-cybercyan transition-colors">Projects</a>
+                <a href="#education" class="hover:text-cybercyan transition-colors">Education</a>
+                <a href="#metrics" class="hover:text-cybercyan transition-colors">Metrics</a>
+            </div>
+
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <a href="mailto:Nabeelfazeel076@gmail.com" class="hidden sm:inline-block px-5 py-2.5 text-xs font-semibold tracking-wide uppercase border border-cybercyan/40 rounded-full text-cybercyan hover:bg-cybercyan hover:text-darkbg transition-all duration-300 shadow-[0_0_15px_rgba(0,242,254,0.1)]">
+                    Get In Touch
+                </a>
+                
+                <button id="menu-btn" class="block md:hidden text-slate-400 hover:text-white focus:outline-none p-2" aria-label="Toggle Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 h-screen w-full bg-[#0a1118] px-6 pt-24 pb-12 flex flex-col space-y-2 font-semibold text-slate-200 text-xl shadow-2xl z-[1000] transform -translate-y-full transition-transform duration-300 ease-in-out overflow-y-auto">
+            <a href="#about" class="mobile-link hover:text-cybercyan transition-colors py-3.5 border-b border-white/5 tracking-wide">About</a>
+            <a href="#skills" class="mobile-link hover:text-cybercyan transition-colors py-3.5 border-b border-white/5 tracking-wide">Skills</a>
+            <a href="#experience" class="mobile-link hover:text-cybercyan transition-colors py-3.5 border-b border-white/5 tracking-wide">Experience</a>
+            <a href="#projects" class="mobile-link hover:text-cybercyan transition-colors py-3.5 border-b border-white/5 tracking-wide">Projects</a>
+            <a href="#education" class="mobile-link hover:text-cybercyan transition-colors py-3.5 border-b border-white/5 tracking-wide">Education</a>
+            <a href="#metrics" class="mobile-link hover:text-cybercyan transition-colors py-3.5 border-b border-white/5 tracking-wide">Metrics</a>
+            <a href="mailto:Nabeelfazeel076@gmail.com" class="mobile-link text-center mt-6 px-4 py-4 text-sm font-bold tracking-widest uppercase border border-cybercyan rounded-xl text-cybercyan bg-cybercyan/5 hover:bg-cybercyan hover:text-darkbg transition-all">
+                GET IN TOUCH
+            </a>
+        </div>
+    </nav>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 sm:pt-36 space-y-20 sm:space-y-32">
+
+        <section id="about" class="relative py-4 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-aeroblue/20 border border-aeroblue/40 text-cybercyan text-xs font-semibold tracking-wide uppercase">
+                    <span class="w-2 h-2 rounded-full bg-cybercyan animate-pulse"></span> Open for Engineering Roles
+                </div>
+                <h1 class="text-2xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                    Crafting User-Centric <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cybercyan via-cyan-400 to-blue-500">Digital Experiences</span>
+                </h1>
+                <p class="text-sm sm:text-lg text-slate-400 max-w-xl leading-relaxed">
+                    I am <strong class="text-white font-semibold">Nabeel Fazeel</strong>, a detail-oriented Software Engineer based in Kandy. Specializing in frontend development, UI/UX design, and database systems, I bridge the gap between complex logic and fluid user interfaces.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                    <a href="#projects" class="w-full sm:w-auto text-center px-6 py-3.5 bg-gradient-to-r from-aeroblue to-cyan-700 text-white font-medium rounded-xl shadow-lg shadow-aeroblue/30 hover:shadow-cyan-500/20 hover:brightness-110 transition-all">
+                        View Projects
+                    </a>
+                    <a href="#experience" class="w-full sm:w-auto text-center px-6 py-3.5 glass-card rounded-xl text-white font-medium hover:border-white/20 transition-all">
+                        Work History
+                    </a>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 lg:pt-0">
+                <div class="glass-card p-5 sm:p-6 rounded-2xl relative overflow-hidden group">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white">8 Months</h3>
+                    <p class="text-xs tracking-wide uppercase text-slate-500 font-medium mt-1">Practical Experience</p>
+                    <span class="text-xs text-cybercyan block mt-4 font-medium">UOP Computer Center</span>
+                </div>
+                <div class="glass-card p-5 sm:p-6 rounded-2xl relative overflow-hidden group">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white">19 / 20</h3>
+                    <p class="text-xs tracking-wide uppercase text-slate-500 font-medium mt-1">Industrial Rating</p>
+                    <span class="text-xs text-emerald-400 block mt-4 font-medium">Top Performance Tier</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="space-y-6 sm:space-y-8">
+            <div class="space-y-2">
+                <h2 class="text-xs font-semibold tracking-widest text-cybercyan uppercase">Capabilities</h2>
+                <p class="text-xl sm:text-3xl font-bold text-white tracking-tight">The Professional Skill Set</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-aeroblue/20 border border-aeroblue/30 flex items-center justify-center text-cybercyan">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold text-white">Frontend & UI/UX</h3>
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">UI/UX Designing</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">HTML / CSS</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">JavaScript</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Web Development</span>
+                    </div>
+                </div>
+                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-purple-900/20 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 012-2h10a2 2 0 012 2m-14 0a2 2 0 002 2h10a2 2 0 002-2M7 3h10a2 2 0 012 2v2a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z"></path></svg>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold text-white">Backend & Hardware</h3>
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">C++ / C#</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Python</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Database Admin</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Kotlin & Java</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Hardware Skills</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Networking Basics</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Prompt Engineering</span>
+                    </div>
+                </div>
+                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-4 sm:col-span-2 lg:col-span-1">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-900/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-bold text-white">Productivity & Soft Skills</h3>
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Problem Solving</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Analytical Thinking</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Organized</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Leadership</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Team Work</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">Adaptability</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-white/5 text-xs text-slate-300 border border-white/5">MS Office</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="space-y-6 sm:space-y-8">
+            <div class="space-y-2">
+                <h2 class="text-xs font-semibold tracking-widest text-cybercyan uppercase">Employment History</h2>
+                <p class="text-xl sm:text-3xl font-bold text-white tracking-tight">Engineering Practice</p>
+            </div>
+
+            <div class="relative border-l border-white/10 ml-2 sm:ml-4 pl-5 sm:pl-8 space-y-12">
+                <div class="absolute w-3.5 h-3.5 bg-cybercyan rounded-full -left-[8px] top-1.5 shadow-[0_0_15px_rgba(0,242,254,0.8)]"></div>
+                
+                <div class="space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                        <div>
+                            <h3 class="text-base sm:text-xl font-bold text-white">Software Engineering Intern</h3>
+                            <p class="text-xs sm:text-sm text-cybercyan mt-0.5">Computing Center, Faculty of Engineering, University of Peradeniya</p>
+                        </div>
+                        <span class="inline-block self-start px-2.5 py-1 rounded-full bg-white/5 text-[11px] text-slate-400 border border-white/10 font-medium">
+                            Oct 2025 - June 2026
+                        </span>
+                    </div>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-4xl">
+                        Contributed natively to enterprise institutional platforms spanning architectural research, full-cycle system implementation, and optimization sprints.
+                    </p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11px] sm:text-xs text-slate-400 pt-2">
+                        <li class="flex items-start gap-2 p-3 rounded-xl bg-white/5 border border-white/5">
+                            <span class="text-cybercyan font-bold">✓</span>
+                            <span>Managed extensive web interface verification, automation configurations, and full tracking flows for the Disaster Management System.</span>
+                        </li>
+                        <li class="flex items-start gap-2 p-3 rounded-xl bg-white/5 border border-white/5">
+                            <span class="text-cybercyan font-bold">✓</span>
+                            <span>Engineered responsive interface arrays and secure user authentication gate-logic pipelines.</span>
+                        </li>
+                        <li class="flex items-start gap-2 p-3 rounded-xl bg-white/5 border border-white/5">
+                            <span class="text-cybercyan font-bold">✓</span>
+                            <span>Compiled deep technical project documentation and managed administrative data entry work to streamline internal documentation.</span>
+                        </li>
+                        <li class="flex items-start gap-2 p-3 rounded-xl bg-white/5 border border-white/5">
+                            <span class="text-cybercyan font-bold">✓</span>
+                            <span>Deployed IT infrastructure configurations including PC troubleshooting, software installations, and hardware setups across the Computer Center.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="space-y-6 sm:space-y-8">
+            <div class="space-y-2">
+                <h2 class="text-xs font-semibold tracking-widest text-cybercyan uppercase">Showcase</h2>
+                <p class="text-xl sm:text-3xl font-bold text-white tracking-tight">Recent Developments</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-[9px] uppercase font-bold tracking-wider text-cybercyan px-2 py-0.5 rounded bg-cybercyan/10 inline-block">Full-Cycle Software Process</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">UOP-FAMS</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Faculty Attendance Management System. Actively drove development phases, foundational research engineering, layout custom styling, and secure user verification logic.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Developer / UI Designer</span>
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Authentication</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-[9px] uppercase font-bold tracking-wider text-cyan-400 px-2 py-0.5 rounded bg-cyan-400/10 inline-block">Lab Optimization</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">UOP-CLMS</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Computer Lab Management System. Collaborated closely with the engineering team on framework research, responsive feature implementation, and iterative interface sprints.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Research</span>
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-[9px] uppercase font-bold tracking-wider text-emerald-400 px-2 py-0.5 rounded bg-emerald-400/10 inline-block">Testing & Stability</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">UOP-Disaster Management System</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Managed extensive web interface verification suites, designed automated test workflows, and handled comprehensive bug-tracking and platform stability reporting routines.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Web Verification</span>
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Automated Workflows</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-[9px] uppercase font-bold tracking-wider text-blue-400 px-2 py-0.5 rounded bg-blue-400/10 inline-block">Web System</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Hotel Reservation Web App</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Appointed Team Leader, analyst, and User Interface designer for an end-to-end web transaction and reservation application.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">HTML / CSS</span>
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">C++</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-[9px] uppercase font-bold tracking-wider text-amber-400 px-2 py-0.5 rounded bg-amber-400/10 inline-block">Embedded Automation</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Robotic Smart Door Lock</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Executed custom structural system design, business analytics logic, relational database structuring, and hardware resource allocation management.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Arduino IDE</span>
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">C++</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-[9px] uppercase font-bold tracking-wider text-purple-400 px-2 py-0.5 rounded bg-purple-400/10 inline-block">AI & Hardware Integration</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">IoT Driver Health Monitor</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Comprehensive safety system integrating machine learning models, custom user interface arrays, and system analytics database setups.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Python</span>
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-[9px] uppercase font-bold tracking-wider text-orange-400 px-2 py-0.5 rounded bg-orange-400/10 inline-block">Mobile Development</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">News Reporter App MAD</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Built as developer, user interface architect, and analyst to engineer a content delivery application with modular layouts.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Android Studio</span>
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Kotlin & Java</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 sm:p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-[9px] uppercase font-bold tracking-wider text-rose-400 px-2 py-0.5 rounded bg-rose-400/10 inline-block">Enterprise Software</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Pharmacy Management System</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Formulated layout maps as UI designer and application analyst to structure stock flows, transactional reporting, and internal business logic.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">C#</span>
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">UI Architecture</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="space-y-6 sm:space-y-8">
+            <div class="space-y-2">
+                <h2 class="text-xs font-semibold tracking-widest text-cybercyan uppercase">Qualifications</h2>
+                <p class="text-xl sm:text-3xl font-bold text-white tracking-tight">Education History</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-3">
+                    <span class="text-xs text-cybercyan font-mono">2024 - Present</span>
+                    <h3 class="text-base sm:text-lg font-bold text-white">Higher National Diploma in Software Engineering</h3>
+                    <p class="text-xs text-slate-400 font-medium">National Institute of Business Management (NIBM)</p>
+                    <p class="text-xs text-slate-500 leading-relaxed pt-2">
+                        Relevant Coursework: UI/UX, Programming Languages, Data Structures, Object-Oriented Design, Database Management Systems, Software Engineering Process Management, Mobile Application Development, IoT & Robotics Projects.
+                    </p>
+                </div>
+                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-3">
+                    <span class="text-xs text-cybercyan font-mono">2023 - 2024</span>
+                    <h3 class="text-base sm:text-lg font-bold text-white">Diploma in Software Engineering</h3>
+                    <p class="text-xs text-slate-400 font-medium">National Institute of Business Management (NIBM)</p>
+                </div>
+                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-3">
+                    <span class="text-xs text-cybercyan font-mono">2022/8 - 2022/12</span>
+                    <h3 class="text-base sm:text-lg font-bold text-white">Certificate in Computer Science</h3>
+                    <p class="text-xs text-slate-400 font-medium">National Institute of Business Management (NIBM)</p>
+                </div>
+                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-3">
+                    <span class="text-xs text-cybercyan font-mono">2022/5 - 2022/7</span>
+                    <h3 class="text-base sm:text-lg font-bold text-white">Certificate in General IT</h3>
+                    <p class="text-xs text-slate-400 font-medium">BCAS</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="metrics" class="space-y-6 sm:space-y-8 relative pb-16">
+            <div class="space-y-2">
+                <h2 class="text-xs font-semibold tracking-widest text-cybercyan uppercase">Validation</h2>
+                <p class="text-xl sm:text-3xl font-bold text-white tracking-tight">Verified Internship Metrics</p>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden border border-white/5">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs sm:text-sm min-w-[600px]">
+                        <tbody class="divide-y divide-white/5 text-slate-300">
+                            <tr class="hover:bg-white/[0.02] transition-colors">
+                                <td class="p-4 sm:p-5 font-medium text-white">Overall Apprenticeship Accomplishment</td>
+                                <td class="p-4 sm:p-5"><span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">19 / 20</span></td>
+                                <td class="p-4 sm:p-5 text-slate-400">Successfully executed all assigned engineering tasks in a highly satisfactory manner.</td>
+                            </tr>
+                            <tr class="hover:bg-white/[0.02] transition-colors">
+                                <td class="p-4 sm:p-5 font-medium text-white">Criticism Intake & Growth Mindset</td>
+                                <td class="p-4 sm:p-5"><span class="px-2.5 py-1 rounded bg-cybercyan/10 text-cybercyan border border-cybercyan/20 font-medium">Outstanding</span></td>
+                                <td class="p-4 sm:p-5 text-slate-400">Accepts and makes constructive use of criticism dynamically while remaining flexible and willing to learn.</td>
+                            </tr>
+                            <tr class="hover:bg-white/[0.02] transition-colors">
+                                <td class="p-4 sm:p-5 font-medium text-white">Teamwork & Co-worker Relations</td>
+                                <td class="p-4 sm:p-5"><span class="px-2.5 py-1 rounded bg-cybercyan/10 text-cybercyan border border-cybercyan/20 font-medium">Outstanding</span></td>
+                                <td class="p-4 sm:p-5 text-slate-400">Consistently works effectively within structured groups and demonstrates high responsibility.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMobileNavigationPanel() {
+            if (mobileMenu.classList.contains('-translate-y-full')) {
+                // Open menu panel safely over background content
+                mobileMenu.classList.remove('-translate-y-full');
+                mobileMenu.classList.add('translate-y-0');
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Close menu cleanly
+                mobileMenu.classList.remove('translate-y-0');
+                mobileMenu.classList.add('-translate-y-full');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        menuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleMobileNavigationPanel();
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-y-0');
+                mobileMenu.classList.add('-translate-y-full');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+</body>
+</html>
+    <div class="glow-orb w-[300px] h-[300px] sm:w-[700px] sm:h-[700px] bg-cyan-950/25 top-[500px] right-[-200px]"></div>
+    <div class="glow-orb w-[250px] h-[250px] sm:w-[550px] sm:h-[550px] bg-aeroblue/15 bottom-[300px] left-[-80px]"></div>
+
     <nav class="glass-nav fixed top-0 left-0 w-full z-[100] px-4 sm:px-6 py-4">
         <div class="max-w-7xl mx-auto flex items-center justify-between relative z-[110]">
             <a href="#" class="text-lg sm:text-xl font-bold tracking-tight text-white hover:opacity-90 transition-opacity">
