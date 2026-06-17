@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="fixed inset-x-0 top-0 h-screen w-full bg-[#0a1118]/98 backdrop-blur-2xl px-6 pt-24 pb-12 flex flex-col space-y-4 font-semibold text-slate-200 text-xl shadow-2xl z-[100] transform -translate-y-full transition-transform duration-300 ease-in-out overflow-y-auto">
+        <div id="mobile-menu" class="fixed inset-x-0 top-0 h-screen w-full bg-[#0a1118] px-6 pt-24 pb-12 flex flex-col space-y-4 font-semibold text-slate-200 text-xl shadow-2xl z-[100] transform -translate-y-full transition-transform duration-300 ease-in-out overflow-y-auto">
             <a href="#about" class="mobile-link hover:text-cybercyan transition-colors py-3 border-b border-white/5 tracking-wide">About</a>
             <a href="#skills" class="mobile-link hover:text-cybercyan transition-colors py-3 border-b border-white/5 tracking-wide">Skills</a>
             <a href="#experience" class="mobile-link hover:text-cybercyan transition-colors py-3 border-b border-white/5 tracking-wide">Experience</a>
@@ -431,13 +431,13 @@
 
         function toggleMobileNavigationPanel() {
             if (mobileMenu.classList.contains('-translate-y-full')) {
-                // Open menu
+                // Open menu panel safely over background content
                 mobileMenu.classList.remove('-translate-y-full');
                 mobileMenu.classList.add('translate-y-0');
                 menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
                 document.body.style.overflow = 'hidden';
             } else {
-                // Close menu
+                // Close menu cleanly
                 mobileMenu.classList.remove('translate-y-0');
                 mobileMenu.classList.add('-translate-y-full');
                 menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
