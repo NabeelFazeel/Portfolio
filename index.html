@@ -61,7 +61,7 @@
     <div class="glow-orb w-[350px] h-[350px] sm:w-[700px] sm:h-[700px] bg-cyan-950/25 top-[500px] right-[-250px]"></div>
     <div class="glow-orb w-[300px] h-[300px] sm:w-[550px] sm:h-[550px] bg-aeroblue/15 bottom-[300px] left-[-100px]"></div>
 
-    <nav class="glass-nav fixed top-0 left-0 w-full z-50 px-6 py-4">
+    <nav class="glass-nav fixed top-0 left-0 w-full z-[100] px-6 py-4">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <a href="#" class="text-xl font-bold tracking-tight text-white hover:opacity-90 transition-opacity">
                 &lt;Nabeel.F /&gt;
@@ -81,7 +81,7 @@
                     Get In Touch
                 </a>
                 
-                <button id="menu-btn" class="block md:hidden text-slate-400 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+                <button id="menu-btn" class="block md:hidden text-slate-400 hover:text-white focus:outline-none p-2 relative z-[110]" aria-label="Toggle Menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -89,14 +89,14 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden fixed top-[68px] left-0 w-full h-screen bg-darkbg/95 border-b border-white/10 backdrop-blur-lg px-6 py-6 flex flex-col space-y-4 font-medium text-slate-400 text-base shadow-xl">
-            <a href="#about" class="mobile-link hover:text-cybercyan transition-colors py-1">About</a>
-            <a href="#skills" class="mobile-link hover:text-cybercyan transition-colors py-1">Skills</a>
-            <a href="#experience" class="mobile-link hover:text-cybercyan transition-colors py-1">Experience</a>
-            <a href="#projects" class="mobile-link hover:text-cybercyan transition-colors py-1">Projects</a>
-            <a href="#education" class="mobile-link hover:text-cybercyan transition-colors py-1">Education</a>
-            <a href="#metrics" class="mobile-link hover:text-cybercyan transition-colors py-1">Metrics</a>
-            <a href="mailto:Nabeelfazeel076@gmail.com" class="mobile-link text-center px-4 py-3 text-xs font-semibold tracking-wide uppercase border border-cybercyan rounded-xl text-cybercyan hover:bg-cybercyan hover:text-darkbg transition-all">
+        <div id="mobile-menu" class="hidden fixed inset-x-0 top-[68px] bottom-0 w-full bg-darkbg/98 border-t border-white/10 backdrop-blur-xl px-6 py-8 flex flex-col space-y-5 font-medium text-slate-300 text-lg shadow-2xl z-[90] overflow-y-auto">
+            <a href="#about" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">About</a>
+            <a href="#skills" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">Skills</a>
+            <a href="#experience" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">Experience</a>
+            <a href="#projects" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">Projects</a>
+            <a href="#education" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">Education</a>
+            <a href="#metrics" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">Metrics</a>
+            <a href="mailto:Nabeelfazeel076@gmail.com" class="mobile-link text-center mt-4 px-4 py-3.5 text-sm font-semibold tracking-wide uppercase border border-cybercyan rounded-xl text-cybercyan hover:bg-cybercyan hover:text-darkbg transition-all">
                 Get In Touch
             </a>
         </div>
@@ -375,7 +375,7 @@
                     <h3 class="text-lg font-bold text-white">Higher National Diploma in Software Engineering</h3>
                     <p class="text-xs text-slate-400 font-medium">National Institute of Business Management (NIBM)</p>
                     <p class="text-xs text-slate-500 leading-relaxed pt-2">
-                        Relevant Coursework: UI/UX, Programming Languages, Data Structures, Object-Oriented Design, Database Management Systems, Software Engineering Process Management, Mobile Application Development, IoT & Robotics Projects.
+                        Relevant Coursework: UI/UX, Programming Languages, Data Structures, Object-Oriented Design, Database Management Systems, Software Engineering Process Management, Enterprise Software Overview, Mobile Application Development, IoT & Robotics Projects.
                     </p>
                 </div>
                 <div class="glass-card p-6 rounded-2xl space-y-3">
@@ -441,23 +441,39 @@
         const menuIcon = document.getElementById('menu-icon');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        // Open/Close menu dynamically on mobile tap
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            
-            // Toggle SVG icon paths dynamically between Hamburger and Close shapes
+        function toggleMenu() {
             if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-            } else {
+                // Show the menu using absolute utility classes
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                // Change burger layout icon to 'X' shape cleanly
                 menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                // Prevent body under-scrolling while mobile panel is up
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Hide the menu safely
+                mobileMenu.classList.remove('flex');
+                mobileMenu.classList.add('hidden');
+                // Revert icon path to classic Hamburger rules
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                // Restore body tracking scroll features
+                document.body.style.overflow = 'auto';
             }
+        }
+
+        // Tap triggers custom engine rules
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
         });
 
-        // Close dropdown natively when internal link anchor target jumps
+        // Close dropdown when internal link anchor target is clicked
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
+                mobileMenu.classList.remove('flex');
                 mobileMenu.classList.add('hidden');
                 menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                document.body.style.overflow = 'auto';
             });
         });
     </script>
