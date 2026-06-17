@@ -25,7 +25,7 @@
             background-color: #0a1118;
             overflow-x: hidden;
         }
-        /* Advanced High-Polish Glassmorphism Utilities */
+        /* Glassmorphism Styling */
         .glass-card {
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(16px);
@@ -40,18 +40,28 @@
             transform: translateY(-5px);
         }
         .glass-nav {
-            background: rgba(10, 17, 24, 0.85);
+            background: rgba(10, 17, 24, 0.9);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
-        /* Ambient Lighting / Glow Orbs */
         .glow-orb {
             position: absolute;
             filter: blur(150px);
             border-radius: 50%;
             z-index: 0;
             pointer-events: none;
+        }
+
+        /* Pure CSS Mobile Menu Engine */
+        #menu-toggle:checked ~ #mobile-menu {
+            display: flex !important;
+        }
+        #menu-toggle:checked ~ div find label[for="menu-toggle"] #burger-icon {
+            display: none;
+        }
+        #menu-toggle:checked ~ div find label[for="menu-toggle"] #close-icon {
+            display: block !important;
         }
     </style>
 </head>
@@ -61,9 +71,11 @@
     <div class="glow-orb w-[350px] h-[350px] sm:w-[700px] sm:h-[700px] bg-cyan-950/25 top-[500px] right-[-250px]"></div>
     <div class="glow-orb w-[300px] h-[300px] sm:w-[550px] sm:h-[550px] bg-aeroblue/15 bottom-[300px] left-[-100px]"></div>
 
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+
     <nav class="glass-nav fixed top-0 left-0 w-full z-[100] px-6 py-4">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight text-white hover:opacity-90 transition-opacity">
+            <a href="#" class="text-xl font-bold tracking-tight text-white">
                 &lt;Nabeel.F /&gt;
             </a>
             
@@ -77,26 +89,26 @@
             </div>
 
             <div class="flex items-center space-x-4">
-                <a href="mailto:Nabeelfazeel076@gmail.com" class="hidden sm:inline-block px-5 py-2.5 text-xs font-semibold tracking-wide uppercase border border-cybercyan/40 rounded-full text-cybercyan hover:bg-cybercyan hover:text-darkbg transition-all duration-300 shadow-[0_0_15px_rgba(0,242,254,0.1)]">
+                <a href="mailto:Nabeelfazeel076@gmail.com" class="hidden sm:inline-block px-5 py-2.5 text-xs font-semibold tracking-wide uppercase border border-cybercyan/40 rounded-full text-cybercyan hover:bg-cybercyan hover:text-darkbg transition-all duration-300">
                     Get In Touch
                 </a>
                 
-                <button id="menu-btn" class="block md:hidden text-slate-400 hover:text-white focus:outline-none p-2 relative z-[110]" aria-label="Toggle Menu">
+                <label type="button" for="menu-toggle" class="block md:hidden text-slate-400 hover:text-white cursor-pointer p-2 select-none" aria-label="Toggle Menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path class="block peer-checked:hidden" id="burger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
-                </button>
+                </label>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden fixed inset-x-0 top-[68px] bottom-0 w-full bg-darkbg/98 border-t border-white/10 backdrop-blur-xl px-6 py-8 flex flex-col space-y-5 font-medium text-slate-300 text-lg shadow-2xl z-[90] overflow-y-auto">
+        <div id="mobile-menu" class="hidden peer-checked:flex fixed inset-x-0 top-[68px] bottom-0 w-full bg-[#0a1118] border-t border-white/10 backdrop-blur-2xl px-6 py-8 flex-col space-y-5 font-medium text-slate-300 text-lg shadow-2xl z-[90] overflow-y-auto">
             <a href="#about" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">About</a>
             <a href="#skills" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">Skills</a>
             <a href="#experience" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">Experience</a>
             <a href="#projects" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">Projects</a>
             <a href="#education" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">Education</a>
             <a href="#metrics" class="mobile-link hover:text-cybercyan transition-colors py-2 border-b border-white/5">Metrics</a>
-            <a href="mailto:Nabeelfazeel076@gmail.com" class="mobile-link text-center mt-4 px-4 py-3.5 text-sm font-semibold tracking-wide uppercase border border-cybercyan rounded-xl text-cybercyan hover:bg-cybercyan hover:text-darkbg transition-all">
+            <a href="mailto:Nabeelfazeel076@gmail.com" class="mobile-link text-center mt-4 px-4 py-3.5 text-sm font-semibold tracking-wide uppercase border border-cybercyan rounded-xl text-cybercyan">
                 Get In Touch
             </a>
         </div>
@@ -282,7 +294,6 @@
                     <div class="flex flex-wrap gap-1.5 pt-2">
                         <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Web Verification</span>
                         <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Automated Workflows</span>
-                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Bug Tracking</span>
                     </div>
                 </div>
 
@@ -295,8 +306,7 @@
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-1.5 pt-2">
-                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">HTML</span>
-                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">CSS</span>
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">HTML / CSS</span>
                         <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">C++</span>
                     </div>
                 </div>
@@ -312,7 +322,6 @@
                     <div class="flex flex-wrap gap-1.5 pt-2">
                         <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Arduino IDE</span>
                         <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">C++</span>
-                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">System Design</span>
                     </div>
                 </div>
 
@@ -325,7 +334,6 @@
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-1.5 pt-2">
-                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Arduino IDE</span>
                         <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Python</span>
                         <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Machine Learning</span>
                     </div>
@@ -341,8 +349,7 @@
                     </div>
                     <div class="flex flex-wrap gap-1.5 pt-2">
                         <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Android Studio</span>
-                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Kotlin</span>
-                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Java</span>
+                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">Kotlin & Java</span>
                     </div>
                 </div>
 
@@ -357,7 +364,6 @@
                     <div class="flex flex-wrap gap-1.5 pt-2">
                         <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">C#</span>
                         <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">UI Architecture</span>
-                        <span class="text-[10px] font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded">System Analysis</span>
                     </div>
                 </div>
             </div>
@@ -375,7 +381,7 @@
                     <h3 class="text-lg font-bold text-white">Higher National Diploma in Software Engineering</h3>
                     <p class="text-xs text-slate-400 font-medium">National Institute of Business Management (NIBM)</p>
                     <p class="text-xs text-slate-500 leading-relaxed pt-2">
-                        Relevant Coursework: UI/UX, Programming Languages, Data Structures, Object-Oriented Design, Database Management Systems, Software Engineering Process Management, Enterprise Software Overview, Mobile Application Development, IoT & Robotics Projects.
+                        Relevant Coursework: UI/UX, Programming Languages, Data Structures, Object-Oriented Design, Database Management Systems, Software Engineering Process Management, Mobile Application Development, IoT & Robotics Projects.
                     </p>
                 </div>
                 <div class="glass-card p-6 rounded-2xl space-y-3">
@@ -436,45 +442,24 @@
     </main>
 
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const menuToggler = document.getElementById('menu-toggle');
+        const links = document.querySelectorAll('.mobile-link');
 
-        function toggleMenu() {
-            if (mobileMenu.classList.contains('hidden')) {
-                // Show the menu using absolute utility classes
-                mobileMenu.classList.remove('hidden');
-                mobileMenu.classList.add('flex');
-                // Change burger layout icon to 'X' shape cleanly
-                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-                // Prevent body under-scrolling while mobile panel is up
-                document.body.style.overflow = 'hidden';
-            } else {
-                // Hide the menu safely
-                mobileMenu.classList.remove('flex');
-                mobileMenu.classList.add('hidden');
-                // Revert icon path to classic Hamburger rules
-                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-                // Restore body tracking scroll features
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        // Tap triggers custom engine rules
-        menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleMenu();
-        });
-
-        // Close dropdown when internal link anchor target is clicked
-        mobileLinks.forEach(link => {
+        links.forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.remove('flex');
-                mobileMenu.classList.add('hidden');
-                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                // Instantly unchecks box and hides screen
+                menuToggler.checked = false;
                 document.body.style.overflow = 'auto';
             });
+        });
+
+        // Toggle background body constraints
+        menuToggler.addEventListener('change', () => {
+            if(menuToggler.checked) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>
