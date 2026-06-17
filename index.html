@@ -89,7 +89,7 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-darkbg/95 border-b border-white/10 backdrop-blur-lg px-6 py-6 flex flex-col space-y-4 font-medium text-slate-400 text-base shadow-xl">
+        <div id="mobile-menu" class="hidden md:hidden fixed top-[68px] left-0 w-full h-screen bg-darkbg/95 border-b border-white/10 backdrop-blur-lg px-6 py-6 flex flex-col space-y-4 font-medium text-slate-400 text-base shadow-xl">
             <a href="#about" class="mobile-link hover:text-cybercyan transition-colors py-1">About</a>
             <a href="#skills" class="mobile-link hover:text-cybercyan transition-colors py-1">Skills</a>
             <a href="#experience" class="mobile-link hover:text-cybercyan transition-colors py-1">Experience</a>
@@ -396,7 +396,7 @@
             </div>
         </section>
 
-        <section id="metrics" class="space-y-8">
+        <section id="metrics" class="space-y-8 relative pb-16">
             <div class="space-y-2">
                 <h2 class="text-xs font-semibold tracking-widest text-cybercyan uppercase">Validation</h2>
                 <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Verified Internship Metrics</p>
@@ -428,36 +428,11 @@
                                 <td class="p-4 sm:p-5"><span class="px-2.5 py-1 rounded bg-cybercyan/10 text-cybercyan border border-cybercyan/20 font-medium">Outstanding</span></td>
                                 <td class="p-4 sm:p-5 text-slate-400">Consistently works effectively within structured groups and demonstrates high responsibility.</td>
                             </tr>
-                            <tr class="hover:bg-white/[0.02] transition-colors">
-                                <td class="p-4 sm:p-5 font-medium text-white">Professional Conduct & Punctuality</td>
-                                <td class="p-4 sm:p-5"><span class="px-2.5 py-1 rounded bg-cybercyan/10 text-cybercyan border border-cybercyan/20 font-medium">Outstanding</span></td>
-                                <td class="p-4 sm:p-5 text-slate-400">Maintained exceptional marks in professional appearance, job attendance, and meeting strict deadlines.</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
-
-        <footer class="py-12 sm:py-16 border-t border-white/5 text-center space-y-6">
-            <div class="glass-card max-w-2xl mx-auto p-6 sm:p-8 rounded-3xl space-y-4 border border-aeroblue/20">
-                <h3 class="text-xl sm:text-2xl font-bold text-white">Let's connect and build systems together</h3>
-                <p class="text-xs text-slate-400 max-w-sm mx-auto">
-                    Reach out for inquiries, technical roles, or engineering project collaborations.
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 text-xs font-mono text-slate-300">
-                    <div class="p-3 bg-white/5 rounded-xl border border-white/5 truncate">📩 Nabeelfazeel076@gmail.com</div>
-                    <div class="p-3 bg-white/5 rounded-xl border border-white/5">📞 +94 761 144 007</div>
-                </div>
-                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 pt-4 text-xs text-slate-500">
-                    <a href="https://github.com/NabeelFazeel" target="_blank" class="hover:text-cybercyan transition-colors">GitHub</a>
-                    <a href="https://linkedin.com/in/nabeel-fazeel-430b3b26a" target="_blank" class="hover:text-cybercyan transition-colors">LinkedIn</a>
-                    <span>📍 Kandy, Sri Lanka</span>
-                </div>
-            </div>
-            <p class="text-[11px] text-slate-600 pt-4 sm:pt-8">&copy; 2026 Mohammed Fazeel Mohammed Nabeel.</p>
-        </footer>
-
     </main>
 
     <script>
@@ -466,10 +441,11 @@
         const menuIcon = document.getElementById('menu-icon');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
+        // Open/Close menu dynamically on mobile tap
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             
-            // Alternates icon path cleanly between hamburger line strings and closing cross metrics
+            // Toggle SVG icon paths dynamically between Hamburger and Close shapes
             if (mobileMenu.classList.contains('hidden')) {
                 menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
             } else {
@@ -477,7 +453,7 @@
             }
         });
 
-        // Implicitly dismisses mobile overlay panel drawer when selecting target hash strings
+        // Close dropdown natively when internal link anchor target jumps
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
