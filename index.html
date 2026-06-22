@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Nabeel Fazeel | Portfolio</title>
+    
+    <!-- Custom Favicon Logo (Case-sensitive matching Logo.png) -->
     <link rel="icon" type="image/png" href="Logo.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -80,6 +83,7 @@
             </div>
 
             <div class="flex items-center space-x-2 sm:space-x-4">
+                <!-- Desktop View CV Navbar Button (Hidden on mobile) -->
                 <a href="https://nabeelfazeel.github.io/Portfolio/Nabeel%20Fazeel%20CV.pdf" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold tracking-wide uppercase border border-cybercyan/40 rounded-full text-cybercyan hover:bg-cybercyan hover:text-darkbg transition-all duration-300 shadow-[0_0_15px_rgba(0,242,254,0.1)]">
                     <svg class="w-4 h-4 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -88,6 +92,7 @@
                     View CV
                 </a>
 
+                <!-- Mobile View CV Navbar Button (Visible on mobile screens) -->
                 <a href="https://nabeelfazeel.github.io/Portfolio/Nabeel%20Fazeel%20CV.pdf" target="_blank" class="inline-flex sm:hidden items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold tracking-wide uppercase border border-cybercyan/30 bg-cybercyan/5 rounded-full text-cybercyan hover:bg-cybercyan hover:text-darkbg transition-all duration-300 shadow-[0_0_10px_rgba(0,242,254,0.05)]">
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -112,6 +117,7 @@
             <a href="#education" class="mobile-link hover:text-cybercyan transition-colors py-3.5 border-b border-white/5 tracking-wide">Education</a>
             <a href="#metrics" class="mobile-link hover:text-cybercyan transition-colors py-3.5 border-b border-white/5 tracking-wide">Metrics</a>
             <a href="#contact" class="mobile-link hover:text-cybercyan transition-colors py-3.5 border-b border-white/5 tracking-wide">Contact</a>
+            <!-- Mobile Drawer Fallback Button -->
             <a href="https://nabeelfazeel.github.io/Portfolio/Nabeel%20Fazeel%20CV.pdf" target="_blank" class="mobile-link flex items-center justify-center gap-2 mt-6 px-4 py-4 text-sm font-bold tracking-widest uppercase border border-cybercyan rounded-xl text-cybercyan bg-cybercyan/5 hover:bg-cybercyan hover:text-darkbg transition-all">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -377,6 +383,7 @@
             </div>
         </section>
 
+        <!-- Education History (Qualifications) Section -->
         <section id="education" class="space-y-6 sm:space-y-8">
             <div class="space-y-2">
                 <h2 class="text-xs font-semibold tracking-widest text-cybercyan uppercase">Qualifications</h2>
@@ -384,32 +391,66 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-3">
-                    <span class="text-xs text-cybercyan font-mono">2024 - Present</span>
-                    <h3 class="text-base sm:text-lg font-bold text-white">Higher National Diploma in Software Engineering</h3>
-                    <p class="text-xs text-slate-400 font-medium">National Institute of Business Management (NIBM)</p>
-                    <p class="text-xs text-slate-500 leading-relaxed pt-2">
-                        Relevant Coursework: UI/UX, Programming Languages, Data Structures, Object-Oriented Design, Database Management Systems, Software Engineering Process Management, Mobile Application Development, IoT & Robotics Projects.
-                    </p>
+                <!-- Higher National Diploma Card -->
+                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-4">
+                    <div class="space-y-1">
+                        <span class="text-xs text-cybercyan font-mono">2024 - 2025</span>
+                        <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Higher National Diploma in Software Engineering</h3>
+                        <p class="text-xs text-slate-400 font-medium">National Institute of Business Management (NIBM)</p>
+                    </div>
                 </div>
-                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-3">
-                    <span class="text-xs text-cybercyan font-mono">2023 - 2024</span>
-                    <h3 class="text-base sm:text-lg font-bold text-white">Diploma in Software Engineering</h3>
-                    <p class="text-xs text-slate-400 font-medium">National Institute of Business Management (NIBM)</p>
+
+                <!-- Diploma Card -->
+                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-4">
+                    <div class="space-y-1">
+                        <span class="text-xs text-cybercyan font-mono">2023 - 2024</span>
+                        <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Diploma in Software Engineering</h3>
+                        <p class="text-xs text-slate-400 font-medium">National Institute of Business Management (NIBM)</p>
+                    </div>
                 </div>
-                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-3">
-                    <span class="text-xs text-cybercyan font-mono">2022/8 - 2022/12</span>
-                    <h3 class="text-base sm:text-lg font-bold text-white">Certificate in Computer Science</h3>
-                    <p class="text-xs text-slate-400 font-medium">National Institute of Business Management (NIBM)</p>
+
+                <!-- Certificate in Computer Science Card -->
+                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-4">
+                    <div class="space-y-1">
+                        <span class="text-xs text-cybercyan font-mono">2022/8 - 2022/12</span>
+                        <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Certificate in Computer Science</h3>
+                        <p class="text-xs text-slate-400 font-medium">National Institute of Business Management (NIBM)</p>
+                    </div>
                 </div>
-                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-3">
-                    <span class="text-xs text-cybercyan font-mono">2022/5 - 2022/7</span>
-                    <h3 class="text-base sm:text-lg font-bold text-white">Certificate in General IT</h3>
-                    <p class="text-xs text-slate-400 font-medium">BCAS</p>
+
+                <!-- Certificate in General IT Card -->
+                <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-4">
+                    <div class="space-y-1">
+                        <span class="text-xs text-cybercyan font-mono">2022/5 - 2022/7</span>
+                        <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Certificate in General IT</h3>
+                        <p class="text-xs text-slate-400 font-medium">BCAS</p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Relevant Coursework Section -->
+        <section id="coursework" class="space-y-6 sm:space-y-8 pt-4">
+            <div class="space-y-2">
+                <h2 class="text-xs font-semibold tracking-widest text-cybercyan uppercase">Academic Focus</h2>
+                <p class="text-xl sm:text-3xl font-bold text-white tracking-tight">Relevant Coursework</p>
+            </div>
+
+            <div class="glass-card p-5 sm:p-6 rounded-2xl">
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="px-3 py-1.5 rounded-xl bg-white/5 text-xs text-slate-300 border border-white/5 font-medium transition-colors hover:border-cybercyan/30">UI/UX Designing</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white/5 text-xs text-slate-300 border border-white/5 font-medium transition-colors hover:border-cybercyan/30">Programming Languages</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white/5 text-xs text-slate-300 border border-white/5 font-medium transition-colors hover:border-cybercyan/30">Data Structures</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white/5 text-xs text-slate-300 border border-white/5 font-medium transition-colors hover:border-cybercyan/30">Object-Oriented Design</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white/5 text-xs text-slate-300 border border-white/5 font-medium transition-colors hover:border-cybercyan/30">Database Management Systems</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white/5 text-xs text-slate-300 border border-white/5 font-medium transition-colors hover:border-cybercyan/30">Software Engineering Process Management</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white/5 text-xs text-slate-300 border border-white/5 font-medium transition-colors hover:border-cybercyan/30">Mobile Application Development</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white/5 text-xs text-slate-300 border border-white/5 font-medium transition-colors hover:border-cybercyan/30">IoT & Robotics Projects</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Validation (Verified Internship Metrics) Section -->
         <section id="metrics" class="space-y-6 sm:space-y-8 relative">
             <div class="space-y-2">
                 <h2 class="text-xs font-semibold tracking-widest text-cybercyan uppercase">Validation</h2>
@@ -478,6 +519,7 @@
             </div>
         </section>
 
+        <!-- Centered Contact Layout -->
         <section id="contact" class="space-y-6 sm:space-y-8 relative pb-16 text-center">
             <div class="space-y-2">
                 <h2 class="text-xs font-semibold tracking-widest text-cybercyan uppercase">Get in touch</h2>
@@ -486,6 +528,7 @@
 
             <div class="flex justify-center w-full">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl w-full">
+                    <!-- Email Card -->
                     <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center space-y-4">
                         <div class="w-10 h-10 rounded-xl bg-aeroblue/20 border border-aeroblue/30 flex items-center justify-center text-cybercyan">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -500,6 +543,7 @@
                         </div>
                     </div>
 
+                    <!-- Phone Card -->
                     <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center space-y-4">
                         <div class="w-10 h-10 rounded-xl bg-cyan-900/20 border border-cyan-500/30 flex items-center justify-center text-cybercyan">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -514,6 +558,7 @@
                         </div>
                     </div>
 
+                    <!-- Socials Card -->
                     <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center space-y-4">
                         <div class="w-10 h-10 rounded-xl bg-emerald-900/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
